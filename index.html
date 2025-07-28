@@ -1,57 +1,318 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VOLTSYSTEM</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Électricien Professionnel - Services Électriques Spécialisés</title>
+    <meta name="description" content="Électricien spécialisé - Installations électriques, domotique, systèmes d'alarme et bornes de recharge véhicules électriques">
+    <meta name="keywords" content="électricien, installation électrique, domotique, alarme, borne recharge, NF C 15-100">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 <body>
-  <header>
-    <div class="logo"><img src="assets/images/logo-voltsystem.png" /></div>
+    <!-- Navigation -->
     <nav>
-      <ul class="nav-links">
-        <li><a href="#about">À propos</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+        <div class="nav-container">
+            <div class="logo">ElectricPro</div>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showPage('home')">Accueil</a></li>
+                <li><a href="#" onclick="showPage('installations')">Installations</a></li>
+                <li><a href="#" onclick="showPage('domotique')">Domotique</a></li>
+                <li><a href="#" onclick="showPage('alarme')">Sécurité</a></li>
+                <li><a href="#" onclick="showPage('bornes')">Bornes de Recharge</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </nav>
-  </header>
 
-  <main>
-    <section id="about">
-      <h1>À propos</h1>
-      <p>Ingénieur en systèmes thermiques industriels, depuis près de 20 ans, je travaille sur des projets techniques complexes pour des grands groupes et j’ai récemment décidé d’élargir mes d’activités à l’installation et la rénovation de systèmes électriques , domotiques, d’alarme et de vidéosurveillance ainsi que des bornes de recharge pour véhicules électriques.</p>
-      <div class="image-placeholder"><img src="assets/images/about.jpg"; width=200vh/></div>
-    </section>
+    <!-- Page d'accueil -->
+    <div id="home" class="page-content active">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-image-placeholder">
+                <img src="images/hero-main.jpg" alt="Électricien professionnel au travail" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="placeholder-text">
+                    📸 Emplacement pour photo principale<br>
+                    Nom du fichier : hero-main.jpg<br>
+                    (Dimensions : 300x200px)
+                </div>
+            </div>
+            <div class="hero-content">
+                <h1>Électricien Professionnel</h1>
+                <p>Spécialiste en installations électriques, domotique et solutions énergétiques modernes</p>
+                <a href="#services" class="cta-button">Découvrir nos services</a>
+            </div>
+        </section>
 
-    <section id="services">
-      <div class="services">
-      <h2>Services</h2>
-      <ul>
-        <li>Service 1</li>
-        <li>Service 2</li>
-        <li>Service 3</li>
-      </ul>
- <li> <a href="electricite.html" class="service-card">Electricité</a></li>
- <li> <a href="service3.html" class="service-card">Domotique</a></li>
- <li> <a href="service2.html" class="service-card">Alarmes et vidéosurveillance</a></li>
-      </div>
-    </section>
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="section-title">Nos Services Spécialisés</h2>
+                <div class="services-grid">
+                    <div class="service-card" onclick="showPage('installations')">
+                        <div class="service-icon">⚡</div>
+                        <h3>Installations Électriques</h3>
+                        <p>Installations conformes NF C 15-100, rénovations et mises en conformité pour votre sécurité et tranquillité d'esprit.</p>
+                    </div>
+                    <div class="service-card" onclick="showPage('domotique')">
+                        <div class="service-icon">🏠</div>
+                        <h3>Domotique et Maison Connectée</h3>
+                        <p>Transformez votre habitation en maison intelligente avec nos solutions domotiques sur mesure et connectées.</p>
+                    </div>
+                    <div class="service-card" onclick="showPage('alarme')">
+                        <div class="service-icon">🔒</div>
+                        <h3>Systèmes d'Alarme et Sécurité</h3>
+                        <p>Protection complète de votre domicile avec des systèmes d'alarme modernes et fiables, installation et maintenance.</p>
+                    </div>
+                    <div class="service-card" onclick="showPage('bornes')">
+                        <div class="service-icon">🔋</div>
+                        <h3>Bornes de Recharge</h3>
+                        <p>Installation de bornes de recharge pour véhicules électriques, solutions résidentielles et professionnelles.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <form name="contact" method="POST" data-netlify="true">
-        <input type="text" name="name" placeholder="Votre nom" required />
-        <input type="email" name="email" placeholder="Votre email" required />
-        <textarea name="message" placeholder="Votre message" required></textarea>
-        <button type="submit">Envoyer</button>
-      </form>
-    </section>
-  </main>
+    <!-- Page Installations Électriques -->
+    <div id="installations" class="page-content">
+        <div class="container">
+            <a href="#" onclick="showPage('home')" class="back-button">← Retour à l'accueil</a>
+            <div class="page-header">
+                <h1>Installations Électriques</h1>
+                <p>Conformité NF C 15-100 garantie - Sécurité et qualité professionnelle</p>
+            </div>
+            <div class="service-detail">
+                <div class="image-container">
+                    <img src="images/installations.jpg" alt="Installation électrique professionnelle" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="placeholder-text">
+                        📸 Photo : Installation électrique professionnelle<br>
+                        Nom du fichier : installations.jpg<br>
+                        Exemple : Tableau électrique moderne, câblage soigné<br>
+                        (Dimensions recommandées : 1200x300px)
+                    </div>
+                </div>
+                <h2>Installations Électriques Professionnelles</h2>
+                <p>Fort de plusieurs années d'expérience, je réalise toutes vos installations électriques dans le respect strict de la norme NF C 15-100. Cette norme française garantit la sécurité des installations électriques dans les locaux d'habitation.</p>
+                
+                <div class="service-features">
+                    <div class="feature">
+                        <h4>Installations Neuves</h4>
+                        <p>Conception et réalisation complète de votre installation électrique pour constructions neuves.</p>
+                    </div>
+                    <div class="feature">
+                        <h4>Rénovations</h4>
+                        <p>Modernisation de vos installations existantes selon les normes actuelles.</p>
+                    </div>
+                    <div class="feature">
+                        <h4>Mises en Conformité</h4>
+                        <p>Diagnostic et mise en conformité NF C 15-100 pour votre sécurité.</p>
+                    </div>
+                    <div class="feature">
+                        <h4>Tableaux Électriques</h4>
+                        <p>Installation et remplacement de tableaux électriques modernes et sécurisés.</p>
+                    </div>
+                    <div class="feature">
+                        <h4>Prises et Éclairages</h4>
+                        <p>Installation de prises, interrupteurs et points lumineux selon vos besoins.</p>
+                    </div>
+                    <div class="feature">
+                        <h4>Diagnostic Électrique</h4>
+                        <p>Contrôle complet de votre installation avec rapport détaillé.</p>
+                    </div>
+                </div>
+                <p style="margin-top: 2rem;"><strong>Garantie :</strong> Toutes nos installations sont garanties et accompagnées du certificat de conformité obligatoire.</p>
+            </div>
+        </div>
+    </div>
 
-  <footer>
-    <p>&copy; 2025 VOLTSYSTEM</p>
-  </footer>
+    <!-- Page Domotique -->
+    <div id="domotique" class="page-content">
+        <div class="container">
+            <a href="#" onclick="showPage('home')" class="back-button">← Retour à l'accueil</a>
+            <div class="page-header">
+                <h1>Domotique et Maison Connectée</h1>
+                <p>Transformez votre habitat en maison intelligente</p>
+            </div>
+            <div class="service-detail">
+                <div class="image-container">
+                    <img src="images/domotique.jpg" alt="Système domotique moderne" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="placeholder-text">
+                        📸 Photo : Système domotique en action<br>
+                        Nom du fichier : domotique.jpg<br>
+                        Exemple : Tablette de contrôle, éclairage automatisé<br>
+                        (Dimensions recommandées : 1200x300px)
+                    </div>
+                </div>
+                <h2>Solutions Domotiques Sur Mesure</h2>
+                <p>La domotique révolutionne votre quotidien en automatisant et connectant tous les équipements de votre maison. Confort, sécurité et économies d'énergie sont au rendez-vous avec nos solutions personnalisées.</p>
+                
+                <div class="service-features">
+                    <div class="feature">
+                        <h4>Éclairage Intelligent</h4>
+                        <p>Gestion automatique et programmable de tous vos éclairages avec variation d'intensité.</p>
+                    </div>
+                    <div class="feature">
+                        <h4>Chauffage Connecté</h4>
+                        <p>Thermostat intelligent pour optimiser votre confort et réduire vos factures.</p>
+                    </div>
+                    <div class="feature">
+                        <h4>Volets et Stores</h4>
+                        <p>Automatisation de vos volets roulants et stores avec programmation horaire.</p>
+                    </div>
+                    <div class="feature">
+                        <h4>Sécurité Intégrée</h4>
+                        <p>Caméras, détecteurs et alarmes connectés à votre système central.</p>
+                    </div>
+                    <div class="feature">
+                        <h4>Contrôle à Distance</h4>
+                        <p>Pilotage complet via smartphone ou tablette, où que vous soyez.</p>
+                    </div>
+                    <div class="feature">
+                        <h4>Scénarios Personnalisés</h4>
+                        <p>Création de scénarios automatiques selon vos habitudes de vie.</p>
+                    </div>
+                </div>
+                <p style="margin-top: 2rem;"><strong>Technologies utilisées :</strong> Systèmes KNX, Z-Wave, Wi-Fi, compatibles avec Alexa et Google Home.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Alarme et Sécurité -->
+    <div id="alarme" class="page-content">
+        <div class="container">
+            <a href="#" onclick="showPage('home')" class="back-button">← Retour à l'accueil</a>
+            <div class="page-header">
+                <h1>Systèmes d'Alarme et Sécurité</h1>
+                <p>Protection complète de votre domicile</p>
+            </div>
+            <div class="service-detail">
+                <div class="image-container">
+                    <img src="images/alarme.jpg" alt="Système de sécurité moderne" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="placeholder-text">
+                        📸 Photo : Système de sécurité moderne<br>
+                        Nom du fichier : alarme.jpg<br>
+                        Exemple : Clavier d'alarme, détecteurs, caméra<br>
+                        (Dimensions recommandées : 1200x300px)
+                    </div>
+                </div>
+                <h2>Solutions de Sécurité Avancées</h2>
+                <p>Protégez efficacement votre famille et vos biens avec nos systèmes d'alarme et de sécurité dernière génération. Installation professionnelle et maintenance assurées pour une tranquillité d'esprit totale.</p>
+                
+                <div class="service-features">
+                    <div class="feature">
+                        <h4>Alarme Anti-Intrusion</h4>
+                        <p>Détecteurs de mouvement et d'ouverture avec centrale d'alarme connectée.</p>
+                    </div>
+                    <div class="feature">
+                        <h4>Vidéosurveillance</h4>
+                        <p>Caméras HD avec vision nocturne et enregistrement sur serveur local ou cloud.</p>
+                    </div>
+                    <div class="feature">
+                        <h4>Contrôle d'Accès</h4>
+                        <p>Digicode, badges RFID, interphone vidéo pour sécuriser vos entrées.</p>
+                    </div>
+                    <div class="feature">
+                        <h4>Détection Incendie</h4>
+                        <p>Détecteurs de fumée interconnectés et alertes automatiques.</p>
+                    </div>
+                    <div class="feature">
+                        <h4>Télésurveillance</h4>
+                        <p>Connexion à un centre de télésurveillance pour intervention rapide.</p>
+                    </div>
+                    <div class="feature">
+                        <h4>Application Mobile</h4>
+                        <p>Surveillance et contrôle en temps réel depuis votre smartphone.</p>
+                    </div>
+                </div>
+                <p style="margin-top: 2rem;"><strong>Certification :</strong> Matériel certifié NF&A2P et installation conforme aux normes de sécurité.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Bornes de Recharge -->
+    <div id="bornes" class="page-content">
+        <div class="container">
+            <a href="#" onclick="showPage('home')" class="back-button">← Retour à l'accueil</a>
+            <div class="page-header">
+                <h1>Bornes de Recharge Véhicules Électriques</h1>
+                <p>Solutions de recharge à domicile et en entreprise</p>
+            </div>
+            <div class="service-detail">
+                <div class="image-container">
+                    <img src="images/bornes.jpg" alt="Borne de recharge véhicule électrique" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="placeholder-text">
+                        📸 Photo : Borne de recharge installée<br>
+                        Nom du fichier : bornes.jpg<br>
+                        Exemple : Véhicule électrique en charge, borne murale<br>
+                        (Dimensions recommandées : 1200x300px)
+                    </div>
+                </div>
+                <h2>Installation de Bornes de Recharge</h2>
+                <p>Passez à l'électrique en toute sérénité avec nos solutions de recharge adaptées à vos besoins. Installation professionnelle de bornes de recharge résidentielles et professionnelles avec toutes les certifications requises.</p>
+                
+                <div class="service-features">
+                    <div class="feature">
+                        <h4>Bornes Résidentielles</h4>
+                        <p>Installation de wallbox 7kW à 22kW pour recharge rapide à domicile.</p>
+                    </div>
+                    <div class="feature">
+                        <h4>Solutions Entreprises</h4>
+                        <p>Bornes multiples pour flottes d'entreprise et places de stationnement.</p>
+                    </div>
+                    <div class="feature">
+                        <h4>Recharge Intelligente</h4>
+                        <p>Bornes connectées avec gestion des heures creuses et programmation.</p>
+                    </div>
+                    <div class="feature">
+                        <h4>Installation Complète</h4>
+                        <p>Étude électrique, renforcement si nécessaire, pose et mise en service.</p>
+                    </div>
+                    <div class="feature">
+                        <h4>Aides et Subventions</h4>
+                        <p>Accompagnement pour obtenir le crédit d'impôt IRVE et aides locales.</p>
+                    </div>
+                    <div class="feature">
+                        <h4>Maintenance</h4>
+                        <p>Contrat de maintenance préventive et dépannage rapide.</p>
+                    </div>
+                </div>
+                <p style="margin-top: 2rem;"><strong>Certification IRVE :</strong> Installateur qualifié IRVE (Infrastructure de Recharge pour Véhicules Électriques) pour bénéficier des aides publiques.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <h3>Contactez-nous</h3>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h4>📞 Téléphone</h4>
+                    <p>01 23 45 67 89</p>
+                </div>
+                <div class="contact-item">
+                    <h4>📧 Email</h4>
+                    <p>contact@electricpro.fr</p>
+                </div>
+                <div class="contact-item">
+                    <h4>📍 Zone d'intervention</h4>
+                    <p>Paris et région parisienne</p>
+                </div>
+                <div class="contact-item">
+                    <h4>🕐 Horaires</h4>
+                    <p>Lun-Ven : 8h-18h<br>Urgences 24h/7j</p>
+                </div>
+            </div>
+            <p style="margin-top: 2rem; opacity: 0.7;">&copy; 2025 ElectricPro - Électricien Professionnel. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
