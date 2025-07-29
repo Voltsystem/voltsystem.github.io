@@ -18,7 +18,8 @@ electricien-website/
 │   ├── alarme.jpg          # Systèmes d'alarme (1200x300px)
 │   └── bornes.jpg          # Bornes de recharge (1200x300px)
 └── assets/
-    └── favicon.ico         # Icône du site
+    ├── favicon.ico         # Icône du site
+    └── logo.png            # Logo de l'entreprise (recommandé : 150x40px)
 3. Activation de GitHub Pages
 
 Allez dans Settings de votre repository
