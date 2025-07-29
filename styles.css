@@ -47,9 +47,9 @@ nav {
 }
 
 .logo-entreprise {
-    height: 100px;
+    height: 80px;
     width: auto;
-    max-width: 300px;
+    max-width: 200px;
     object-fit: contain;
 }
 
