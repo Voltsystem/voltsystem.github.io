@@ -1,4 +1,4 @@
-
+document.querySelector('.mobile-menu').addEventListener('click', function() { alert('Menu cliqué !'); });
 // Navigation entre les pages
 function showPage(pageId) {
     // Masquer toutes les pages
