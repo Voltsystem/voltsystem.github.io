@@ -34,11 +34,25 @@ nav {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    max-width: 150px;
+    object-fit: contain;
+}
+
+.logo-text {
     font-size: 1.8rem;
     font-weight: bold;
     color: #ffd700;
     text-transform: uppercase;
     letter-spacing: 2px;
+    display: none; /* Masqué par défaut, s'affiche si l'image ne charge pas */
 }
 
 .nav-links {
